@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface IUserRepository extends JpaRepository<User, Long> {
     User findByCpf(String cpf);
-    List<User> findByNomeContains(String nome);
+    List<User> findByNameContains(String name);
 }
