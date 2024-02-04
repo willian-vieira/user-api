@@ -38,8 +38,8 @@ public class UserService {
         return null;
     }
 
-    public List<UserDTO> queryByNameUserLike(String nome) {
-        List<User> users = userRepository.findByNomeContains(nome);
+    public List<UserDTO> queryByNameUserLike(String name) {
+        List<User> users = userRepository.findByNameContains(name);
         return users
             .stream()
             .map(UserDTO::convertToUser)
