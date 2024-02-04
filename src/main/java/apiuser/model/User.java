@@ -1,5 +1,6 @@
 package apiuser.model;
 
+import apiuser.dto.UserDTO;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -78,5 +79,17 @@ public class User {
 
     public void setDateRegister(Date dateRegister) {
         this.dateRegister = dateRegister;
+    }
+
+    //--- Convert User to UserDTO
+    public static User convertToUserDTO(UserDTO userDTO) {
+        User user = new User();
+        user.setName(userDTO.getName());
+        user.setAddress(userDTO.getAddress());
+        user.setCpf(userDTO.getCpf());
+        user.setEmail(userDTO.getEmail());
+        user.setPhone(userDTO.getPhone());
+        user.setDateRegister(userDTO.getDateRegister());
+        return user;
     }
 }
