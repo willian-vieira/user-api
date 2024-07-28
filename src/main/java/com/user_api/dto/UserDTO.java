@@ -20,6 +20,7 @@ public class UserDTO {
     //--- Converter UserDTO em User
     public static UserDTO convertToUser(User user) {
         UserDTO userDTO = new UserDTO();
+        userDTO.setId(user.getId());
         userDTO.setName(user.getName());
         userDTO.setAddress(user.getAddress());
         userDTO.setCpf(user.getCpf());
