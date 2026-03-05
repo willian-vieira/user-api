@@ -3,7 +3,6 @@ package com.user_api.dto;
 import com.user_api.entity.User;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.time.LocalDateTime;
 
 @Getter
